@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: hsl(233, 47%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  width: 327px;
+  height: 780px;
+  border-radius: 8px;
+}
+
+.top {
+  height: 240px;
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 8px 8px 0px 0px;
+  margin-bottom: 2.5em;
+}
+
+.top-img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+
+.desktop {
+  display: none;
+}
+
+.info,
+.rated {
+  text-align: center;
+}
+
+.info,
+.rated-title {
+  font-family: "Inter";
+}
+
+.info-title {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.735em;
+  font-weight: 700;
+  line-height: 1.162em;
+  margin-bottom: 0.6em;
+  font-kerning: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.info-title-color {
+  color: hsl(277, 64%, 61%);
+}
+
+.info-text {
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 0.935em;
+  line-height: 1.65em;
+  font-kerning: none;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 2.65em;
+}
+
+.rated-title {
+  /* color: hsl(0, 0%, 100%); */
+  font-kerning: none;
+  margin-bottom: 0.21em;
+  color: hsl(0, 0%, 100%);
+}
+.rated-text {
+  font-family: "Lexend Deca";
+  text-transform: uppercase;
+  font-size: 0.825em;
+  font-kerning: none;
+  margin-bottom: 2.2em;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+}
+
+/* medias queries desktop 1440px */
+
+@media screen and (min-width: 376px) {
+  .container {
+    display: grid;
+    grid-template-columns: 570px 540px;
+
+    width: 1110px;
+    height: 446px;
+    border-radius: 8px;
+  }
+
+  .top:nth-of-type(1) {
+    order: 2;
+    width: 540px;
+    height: 446px;
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .top-img {
+    width: 100%;
+    border-radius: 0px 8px 8px 0px;
+    overflow: hidden;
+  }
+
+  .text-container:nth-of-type(2) {
+    order: 1;
+  }
+
+  .info {
+    margin-top: 4.5em;
+    text-align: left;
+    margin-left: 2.2em;
+    width: 30em;
+  }
+
+  .info-title {
+    font-size: 2.25em;
+    line-height: 1.22em;
+    margin-bottom: 0.7em;
+  }
+
+  .info-text {
+    margin-left: 2.4em;
+    margin-right: 4em;
+    margin-bottom: 4.8em;
+  }
+
+  .rated {
+    display: flex;
+    text-align: left;
+    margin-left: 4.5em;
+  }
+  .companies {
+    margin-right: 4em;
+  }
+  .templates {
+    margin-right: 4em;
+  }
+}
